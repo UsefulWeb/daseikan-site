@@ -9,7 +9,6 @@ let plugin = gulpLoadPlugins(),
 
 console.log('availiable plugins: ', Object.keys(plugin).join(', '));
 
-
 function onerror(e) {
   console.log('>>> error:\n', e.name);
   console.log('---> message <---\n', e.message);
@@ -34,7 +33,8 @@ gulp
         .src(mask)
         .pipe(plugin.pug())
         .on('error', onerror)
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('dist/'))
+        .pipe(sync.reload({ stream: true }))
     }
     plugin.watch(mask, run);
     run();
@@ -92,7 +92,7 @@ gulp
       'dist/bower/font-awesome/css/font-awesome.min.css',
 
       'src/css/compiled/sprites.css',
-      // 'src/css/compiled/styles.css'
+      'src/css/compiled/styles.css'
     ];
 
     function run() {
@@ -120,7 +120,8 @@ gulp
         }))
         .on('error', onerror)
         .pipe(plugin.rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/css'))
+        .pipe(sync.reload({ stream: true }))
     }
     plugin.watch(mask, run);
     run();

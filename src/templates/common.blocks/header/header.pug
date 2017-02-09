@@ -1,17 +1,30 @@
 header.header
   .header__contacts
-    .header__contacts-phone
-      i.icon.icon-phone
-      | Call Us Today
-      a.header__contacts-phone-number(href='callto:8889997777') 888.999.7777
-    ul.header__contacts-social
-      li
-        a(href="https://instagram.com")
-          i.fa.fa-instagram
-      li
-        a(href="https://twitter.com")
-          i.fa.fa-twitter
-      li
-        a(href="https://facebook.com")
-          i.fa.fa-facebook
-  .container
+    .container
+      .header__contacts-phone
+        i.icon.icon-phone
+        | Call Us Today
+        a.header__contacts-phone-number(href='callto:8889997777') 888.999.7777
+      ul.header__contacts-social
+        li
+          a(href="https://instagram.com")
+            i.fa.fa-instagram
+        li
+          a(href="https://twitter.com")
+            i.fa.fa-twitter
+        li
+          a(href="https://facebook.com")
+            i.fa.fa-facebook
+  .header__logo
+    .container
+      img.header__logo-image(src="img/logo.png", alt="Logo")
+      .header__contact-item
+        .header__contact-item.icon.icon-map
+        h3.header__contact-item-title
+          .header__contact-item-title-text Pottington Business Park
+          .header__contact-item-title-hint New York, United America
+      .header__contact-item
+        .header__contact-item.icon.icon-phone
+        h3.header__contact-item-title
+          .header__contact-item-title-text 999-888-7777
+          .header__contact-item-title-hint Call us Today to Register
