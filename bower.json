@@ -1,0 +1,21 @@
+{
+  "name": "layout",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Vladimir Yazykov <neizerth@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

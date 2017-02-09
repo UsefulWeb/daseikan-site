@@ -1,0 +1,30 @@
+
+.icon {
+  background-image: url('../images/sprite.png');
+}
+
+.icon-head {
+  background-position: -0px -0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-phone {
+  background-position: -0px -24px;
+  width: 30px;
+  height: 30px;
+}
+.icon-map {
+  background-position: -0px -54px;
+  width: 31px;
+  height: 31px;
+}
+.icon-phone-white {
+  background-position: -0px -85px;
+  width: 38px;
+  height: 38px;
+}
+.icon-logo {
+  background-position: -0px -123px;
+  width: 125px;
+  height: 76px;
+}
