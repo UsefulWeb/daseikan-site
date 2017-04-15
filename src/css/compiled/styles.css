@@ -1,4 +1,70 @@
 body {
+  font-family: 'Raleway';
   background-color: #f6f6f6;
 }
 
+.header__contacts-container {
+  position: relative;
+  padding: 17px 0;
+}
+.header__contacts-container:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: skewX(-33.5deg);
+  background: #fff;
+}
+.header__contacts-content {
+  position: relative;
+  z-index: 2;
+}
+.header__contacts-phone {
+  float: left;
+  display: inline-block;
+}
+.header__contacts-phone-number {
+  font-weight: 800;
+}
+.header__contacts-social {
+  display: inline-block;
+  float: right;
+  margin: 0;
+}
+.header__contacts-social-item {
+  display: inline-block;
+}
+.header__logo {
+  color: #fff;
+  padding: 38px 15px 50px 0;
+  position: relative;
+}
+.header__logo:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: block;
+  z-index: 1;
+  transform: skewX(-33.5deg);
+}
+.header__logo-content {
+  position: relative;
+  z-index: 2;
+}
+.header__logo-title {
+  display: inline-block;
+}
+.header__logo-title_first-word {
+  font-weight: 800;
+}
+.header__contact-item-title-text {
+  font-weight: 800;
+}

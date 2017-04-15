@@ -1,30 +1,37 @@
 header.header
   .header__contacts
     .container
-      .header__contacts-phone
-        i.icon.icon-phone
-        | Call Us Today
-        a.header__contacts-phone-number(href='callto:8889997777') 888.999.7777
-      ul.header__contacts-social
-        li
-          a(href="https://instagram.com")
-            i.fa.fa-instagram
-        li
-          a(href="https://twitter.com")
-            i.fa.fa-twitter
-        li
-          a(href="https://facebook.com")
-            i.fa.fa-facebook
-  .header__logo
-    .container
-      img.header__logo-image(src="img/logo.png", alt="Logo")
-      .header__contact-item
-        .header__contact-item.icon.icon-map
+      .header__contacts-container
+        .header__contacts-content.clearfix
+          .header__contacts-phone
+            i.icon.icon-phone
+            | Call Us Today
+            a.header__contacts-phone-number(href='callto:8889997777') 888.999.7777
+          ul.header__contacts-social
+            li.header__contacts-social-item
+              a.header__contacts-social-icon-link(href="https://instagram.com")
+                i.fa.fa-instagram
+            li.header__contacts-social-item
+              a.header__contacts-social-icon-link(href="https://twitter.com")
+                i.fa.fa-twitter
+            li.header__contacts-social-item
+              a.header__contacts-social-icon-link(href="https://facebook.com")
+                i.fa.fa-facebook
+  .container
+    .row
+      .header__logo.col-md-3
+        .header__logo-content
+          img.header__logo-image(src="img/logo.png", alt="Logo")
+          h2.header__logo-title 
+            strong.header__logo-title_first-word Knock 
+            | Out
+      .header__contact-item.col-md-4.col-md-offset-1
+        .header__contact-item-icon.icon.icon-map
         h3.header__contact-item-title
           .header__contact-item-title-text Pottington Business Park
           .header__contact-item-title-hint New York, United America
-      .header__contact-item
-        .header__contact-item.icon.icon-phone
+      .header__contact-item.col-md-4
+        .header__contact-item-icon.icon.icon-phone
         h3.header__contact-item-title
           .header__contact-item-title-text 999-888-7777
           .header__contact-item-title-hint Call us Today to Register

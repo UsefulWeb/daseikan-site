@@ -1,6 +1,5 @@
 import gulp from 'gulp'
 // import browserify from 'browserify'
-import sprity from 'sprity'
 import browserSync from 'browser-sync';
 import gulpLoadPlugins from 'gulp-load-plugins'
 
@@ -37,7 +36,7 @@ gulp
         .pipe(sync.reload({ stream: true }))
     }
     plugin.watch(mask, run);
-    run();
+    return run();
     });
 
 gulp
@@ -51,7 +50,7 @@ gulp
         .pipe(gulp.dest('src/css/stylus'));
     }
     plugin.watch(mask, run);
-    run();
+    return run();
     });
 
 gulp
@@ -68,7 +67,7 @@ gulp
         .pipe(gulp.dest('src/css/sass'));
     }
     plugin.watch(mask, run);
-    run();
+    return run();
     });
 
 gulp
@@ -82,7 +81,7 @@ gulp
         .pipe(gulp.dest('src/css/compiled'));
     }
     plugin.watch(mask, run);
-    run();
+    return run();
     });
 
 gulp
@@ -106,7 +105,7 @@ gulp
         .pipe(gulp.dest('src/css/compiled'));
     }
     plugin.watch(mask, run);
-    run();
+    return run();
     });
 
 gulp
@@ -124,7 +123,7 @@ gulp
         .pipe(sync.reload({ stream: true }))
     }
     plugin.watch(mask, run);
-    run();
+    return run();
     });
 
 gulp
@@ -143,7 +142,7 @@ gulp
         .pipe(gulp.dest('dist/fonts'));
     }
     plugin.watch(mask, run);
-    run();
+    return run();
     })
 
 gulp
@@ -160,15 +159,21 @@ gulp
   .task('sprites', () => {
     let mask = 'src/sprites/*.{png,jpg}';
     function run() {
-      return sprity.src({
-        src: mask,
-        style: './sprites.css',
-        cssPath: '../img'
-        })
-        .pipe(plugin.if('*.png', gulp.dest('./dist/img/'), gulp.dest('src/css/compiled/')))
+      var spriteOutput = gulp.src(mask)
+        .pipe(plugin.spriteGenerator({
+          baseUrl: './src/img',
+          spriteSheetPath: './dist/img',
+          spriteSheetName: 'sprite.png',
+          }));
+
+      spriteOutput.css.pipe(gulp.dest("./dist/css"));
+      spriteOutput.img.pipe(gulp.dest("./dist/image"));
+
+      return spriteOutput;
+        // .pipe(plugin.if('*.png', gulp.dest('./dist/img/'), gulp.dest('src/css/compiled/')))
     }
     plugin.watch(mask, run);
-    run();
+    return run();
     });
 
 // gulp
