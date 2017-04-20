@@ -1,4 +1,8 @@
 body {
   font-family: 'Raleway';
   background-color: #f6f6f6;
+  font-weight: 400;
+}
+.icon-phone_small {
+  transform: scale(0.68);
 }

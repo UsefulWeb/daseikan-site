@@ -1,7 +1,7 @@
 import gulp from 'gulp'
 // import browserify from 'browserify'
 import browserSync from 'browser-sync';
-import gulpLoadPlugins from 'gulp-load-plugins'
+import gulpLoadPlugins from 'gulp-load-plugins';
 
 let plugin = gulpLoadPlugins(),
     sync = browserSync.create();
@@ -90,7 +90,7 @@ gulp
       'src/css/sass/bootstrap.css',
       'dist/bower/font-awesome/css/font-awesome.min.css',
 
-      'src/css/compiled/sprites.css',
+      'src/css/compiled/sprite.css',
       'src/css/compiled/styles.css'
     ];
 
@@ -157,17 +157,17 @@ gulp
 
 gulp
   .task('sprites', () => {
-    let mask = 'src/sprites/*.{png,jpg}';
+    let mask = 'src/sprites/*.*';
     function run() {
       var spriteOutput = gulp.src(mask)
-        .pipe(plugin.spriteGenerator({
-          baseUrl: './src/img',
-          spriteSheetPath: './dist/img',
-          spriteSheetName: 'sprite.png',
+        .pipe(plugin.spritesmith({
+            imgName: 'sprite.png',
+            cssName: 'sprite.css',
+            cssTemplate: './src/sprites.handlebars'
           }));
 
-      spriteOutput.css.pipe(gulp.dest("./dist/css"));
-      spriteOutput.img.pipe(gulp.dest("./dist/image"));
+      spriteOutput.css.pipe(gulp.dest("./src/css/compiled"));
+      spriteOutput.img.pipe(gulp.dest("./dist/img"));
 
       return spriteOutput;
         // .pipe(plugin.if('*.png', gulp.dest('./dist/img/'), gulp.dest('src/css/compiled/')))

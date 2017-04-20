@@ -30,6 +30,7 @@
   "dependencies": {
     "babelify": "^7.3.0",
     "bootstrap-sass": "^3.3.7",
-    "browserify": "^13.3.0"
+    "browserify": "^13.3.0",
+    "gulp.spritesmith": "^6.4.0"
   }
 }

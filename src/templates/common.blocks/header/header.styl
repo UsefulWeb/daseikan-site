@@ -1,12 +1,37 @@
-extra-bold = 800
+extra-bold = 700
 color-primary = #fff
-angle-skew-primary = 33.5deg
 
 .header
+  position relative
+  &:before
+    content ''
+    display block
+    position absolute
+    top 0
+    left 0
+    width 50%
+    height 100%
+    background #000
+    z-index 1
+  &:after
+    content ''
+    display block
+    position absolute
+    top 0
+    left 50%
+    width 50%
+    height 100%
+    background #fff
+    z-index 1
+  &__bottom-container
+    background color-primary
+    position relative
+    overflow hidden
+    z-index 2
   &__contacts
     &-container
       position relative
-      padding 17px 0
+      padding 9px 0 13px
       &:before
         content ''
         display block
@@ -15,47 +40,105 @@ angle-skew-primary = 33.5deg
         position absolute
         top 0
         left 0
-        z-index 1
-        transform skewX(-1*angle-skew-primary)
+        margin-left -33px
+        z-index 3
+        padding 0 3px 0 33px
+        box-sizing content-box
+        transform skewX(-34deg)
+        box-shadow: 2px 4px 21px 0px rgba(1, 1, 1, 0.1);
         background color-primary
     &-content
       position relative
-      z-index 2
+      z-index 4
     &-phone
       float left
       display inline-block
+      margin-left 10px
+    &-phone-icon
+      position relative
+      top: 5px
+    &-phone-title
+      margin-left 9px
+      margin-right 7px
+      letter-spacing 0.2px
     &-phone-number
+      color #212121
       font-weight extra-bold
+      letter-spacing 0.5px
+      &:hover
+        color #898989
     &-social
       display inline-block
       float right
-      margin 0
+      margin 0 42px 0 0
     &-social-item
       display inline-block
+      margin-left 33px
+    &-social-icon-link
+      color #3f3f3e
+      font-size 19px
   &__logo
     color color-primary
     padding 38px 15px 50px 0
-    position relative
+    position relative  
+    max-width: 600px
     &:before
       content ''
       position absolute
-      top 0
-      left 0
+      bottom 0
+      right -52px
       height 100% 
       width 100%
       background #000
       display block
       z-index 1
-      transform skewX(-1*angle-skew-primary)
+      padding 0 52px 0 100px
+      box-sizing: content-box
+      transform skewX(-41deg)
+      box-shadow: 2px 4px 27px 0px rgba(1, 1, 1, 0.3);
     &-content
       position relative
       z-index 2
     &-title
       display inline-block
+      position relative
+      font-size 30px
+      margin 0
+      top 12px
+      left 3px
+      letter-spacing 0.9px
+      font-weight normal
       &_first-word
+        letter-spacing -0.2px
         font-weight extra-bold
   
   &__contact-item
+    padding 47px 0 0 20px
+    &_first
+      padding-left 50px
+    &-icon
+      vertical-align top
+      &.icon-phone
+        position relative
+        top 5px
+        left 2px
     &-title
+      margin 2px 0 0 18px
+      display inline-block
+      vertical-align top
+      color #212121
       &-text
+        font-size 18px
+        letter-spacing 1px
         font-weight extra-bold
+        color inherit
+        &:hover
+          color inherit
+      &-hint
+        font-weight normal
+        color #898989
+        font-size 14px
+        margin-top 15px
+        letter-spacing 0.2px
+        
+  

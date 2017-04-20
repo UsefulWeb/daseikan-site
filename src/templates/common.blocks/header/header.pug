@@ -4,8 +4,8 @@ header.header
       .header__contacts-container
         .header__contacts-content.clearfix
           .header__contacts-phone
-            i.icon.icon-phone
-            | Call Us Today
+            i.header__contacts-phone-icon.icon.icon-phone.icon-phone_small
+            span.header__contacts-phone-title Call Us Today
             a.header__contacts-phone-number(href='callto:8889997777') 888.999.7777
           ul.header__contacts-social
             li.header__contacts-social-item
@@ -17,21 +17,22 @@ header.header
             li.header__contacts-social-item
               a.header__contacts-social-icon-link(href="https://facebook.com")
                 i.fa.fa-facebook
-  .container
+  
+  .container.header__bottom-container
     .row
       .header__logo.col-md-3
         .header__logo-content
           img.header__logo-image(src="img/logo.png", alt="Logo")
           h2.header__logo-title 
-            strong.header__logo-title_first-word Knock 
+            strong.header__logo-title_first-word Knock
             | Out
-      .header__contact-item.col-md-4.col-md-offset-1
-        .header__contact-item-icon.icon.icon-map
+      .header__contact-item.header__contact-item_first.col-md-4.col-md-offset-1
+        i.header__contact-item-icon.icon.icon-map
         h3.header__contact-item-title
           .header__contact-item-title-text Pottington Business Park
           .header__contact-item-title-hint New York, United America
       .header__contact-item.col-md-4
-        .header__contact-item-icon.icon.icon-phone
+        i.header__contact-item-icon.icon.icon-phone
         h3.header__contact-item-title
-          .header__contact-item-title-text 999-888-7777
+          a(href='callto:8889997777').header__contact-item-title-text 999-888-7777
           .header__contact-item-title-hint Call us Today to Register
