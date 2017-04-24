@@ -1,0 +1,22 @@
+nav.top-menu
+  .top-menu__container.container
+    input.top-menu__search-toggle#top-menu__search-toggle(type="checkbox")
+    .top-menu__bar
+      form.top-menu__search#top-menu__search-toggle
+          input.top-menu__search-input(type="search" autofocus placeholder="Введите текст для поиска")
+          label.top-menu__search-button(for="top-menu__search-toggle")
+            .top-menu__search-button-icon.fa.fa-search
+
+    menu.top-menu__list
+      li.top-menu__item.top-menu__item_active
+        a.top-menu__link.top-menu__link_first(href="") Home
+      li.top-menu__item
+        a.top-menu__link(href="") Our Coachs
+      li.top-menu__item
+        a.top-menu__link(href="") Programs
+      li.top-menu__item
+        a.top-menu__link(href="") Locations
+      li.top-menu__item
+        a.top-menu__link(href="") Galleries
+      li.top-menu__item
+        a.top-menu__link(href="") Contact Us

@@ -1,0 +1,97 @@
+@import '../_common/variables.styl'
+@import '../_common/animations.styl'
+
+.top-menu
+  &__container
+    position relative
+  &__bar
+    display block
+    box-shadow: 2px 4px 21px 0px rgba(1, 1, 1, 0.1);
+    width 100%
+    height 75px
+    background-color color-primary
+    position absolute
+    z-index 1
+    top 0
+    left 0
+    margin-left -200px
+    box-sizing content-box
+    transform skewX(-33deg)
+    padding 0 240px
+  
+  &__search
+    &-toggle
+      display none
+      &:checked 
+        &+ .top-menu__bar
+          z-index 3
+        &+ .top-menu__bar .top-menu__search-input
+          display block
+          animation fadeIn 0.5s ease-in-out
+        &+ .top-menu__bar .top-menu__search-button
+          background-color #898989
+      &:not(:checked)
+        &+ .top-menu__bar + .top-menu__list
+          animation fadeIn 0.5s ease-in-out
+    &-input[type="search"]
+      position absolute
+      right 23px
+      top 0
+      height 100%
+      box-sizing border-box
+      padding-right 100px
+      outline none
+      border none
+      // было - 46px
+      width calc(100% - 286px)
+      transform skewX(33deg)
+      font-size 20px
+      display none
+    &-button
+      position absolute
+      right 0
+      top 0
+      height 100%
+      width 100px
+      background-color #000
+      display flex
+      justify-content center
+      align-items center
+      color #fff
+      cursor pointer
+      transition background-color 0.5s ease-in-out
+      &-icon
+        transform skewX(33deg) scaleX(-1)
+        
+  &__list
+    position relative
+    z-index 2
+    list-style-type none
+    margin 0 15px
+    font-size 14.5px
+  &__item
+    color #8d8d8d
+    padding-bottom 4px
+    display inline-block
+    &:hover
+      color #212121
+    &_active
+      padding-bottom 0
+      border-bottom 4px solid #212121
+      color #212121
+        
+  &__link
+    display block
+    padding 29px 36px 22px 34px
+    letter-spacing 0.3px
+    min-width 96px
+    color inherit
+    text-transform uppercase
+    font-weight bold
+    &_first
+      padding-left 1px
+    &:hover
+      text-decoration none
+      color inherit
+    
+  
