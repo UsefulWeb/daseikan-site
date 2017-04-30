@@ -121,6 +121,7 @@
   list-style-type: none;
   margin: 0 15px;
   font-size: 14.5px;
+  padding: 0;
 }
 .top-menu__item {
   color: #8d8d8d;
@@ -150,4 +151,9 @@
 .top-menu__link:hover {
   text-decoration: none;
   color: inherit;
+}
+.top-menu__link:focus {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
 }

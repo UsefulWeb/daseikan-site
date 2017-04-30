@@ -52,22 +52,88 @@
   }
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/RalewayRegular/RalewayRegular.eot");
+  src: url("../fonts/Raleway/RalewayRegular/RalewayRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/RalewayRegular/RalewayRegular.woff") format("woff"), url("../fonts/Raleway/RalewayRegular/RalewayRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/RalewayExtraBold/RalewayExtraBold.eot");
+  src: url("../fonts/Raleway/RalewayExtraBold/RalewayExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/RalewayExtraBold/RalewayExtraBold.woff") format("woff"), url("../fonts/Raleway/RalewayExtraBold/RalewayExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/RalewayLight/RalewayLight.eot");
+  src: url("../fonts/Raleway/RalewayLight/RalewayLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/RalewayLight/RalewayLight.woff") format("woff"), url("../fonts/Raleway/RalewayLight/RalewayLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/RalewayBold/RalewayBold.eot");
+  src: url("../fonts/Raleway/RalewayBold/RalewayBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/RalewayBold/RalewayBold.woff") format("woff"), url("../fonts/Raleway/RalewayBold/RalewayBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/RalewayThin/RalewayThin.eot");
+  src: url("../fonts/Raleway/RalewayThin/RalewayThin.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/RalewayThin/RalewayThin.woff") format("woff"), url("../fonts/Raleway/RalewayThin/RalewayThin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+
 body {
   font-family: 'Raleway';
   background-color: #f6f6f6;
   font-weight: 400;
 }
-input::placeholder {
-  font-family: 'Lato';
+.btn {
+  display: inline-block;
+  padding: 10px 40px;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  font-size: 14px;
 }
-input::-webkit-input-placeholder {
-  font-family: 'Lato';
+.btn:hover {
+  text-decoration: none;
 }
-input::-moz-placeholder {
-  font-family: 'Lato';
+.btn:focus {
+  text-decoration: none;
+  outline: none;
 }
-input:-ms-input-placeholder {
-  font-family: 'Lato';
+.btn-secondary {
+  background-color: #212121;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-secondary:hover {
+  background-color: #343433;
+  color: #fff;
+}
+.btn-secondary:focus {
+  background-color: #343433;
+  color: #fff;
+}
+.btn-primary {
+  background-color: #fff;
+  color: #343433;
+  border: 2px solid #fff;
+}
+.btn-primary:hover {
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  color: #343433;
+}
+.btn-primary:focus {
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  color: #343433;
 }
 .icon-phone_small {
   transform: scale(0.68);
@@ -199,7 +265,7 @@ input:-ms-input-placeholder {
   letter-spacing: 0.9px;
   font-weight: normal;
 }
-.header__logo-title_first-word {
+.header__logo-title-first-word {
   letter-spacing: -0.2px;
   font-weight: 700;
 }
@@ -238,6 +304,48 @@ input:-ms-input-placeholder {
   font-size: 14px;
   margin-top: 15px;
   letter-spacing: 0.2px;
+}
+
+.jumbotron {
+  padding: 117px 0 107px;
+}
+.jumbotron__content {
+  padding: 0 30px;
+}
+.jumbotron__title {
+  font-weight: 100;
+  color: #212121;
+  font-size: 91px;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0 0 18px -6px;
+}
+.jumbotron__title-first-word {
+  font-weight: 700;
+  margin-right: 17px;
+  letter-spacing: 1px;
+}
+.jumbotron__subtitle {
+  color: #343433;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1;
+  margin: 0 0 20px -2px;
+  letter-spacing: 1.4px;
+}
+.jumbotron__text {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 1px;
+  letter-spacing: 0.4px;
+  line-height: 2.2;
+}
+.jumbotron__controls {
+  margin: 71px 0 0 0;
+}
+.jumbotron__control_first {
+  margin-right: 12px;
 }
 
 @-moz-keyframes fadeIn {
@@ -363,6 +471,7 @@ input:-ms-input-placeholder {
   list-style-type: none;
   margin: 0 15px;
   font-size: 14.5px;
+  padding: 0;
 }
 .top-menu__item {
   color: #8d8d8d;
@@ -393,3 +502,14 @@ input:-ms-input-placeholder {
   text-decoration: none;
   color: inherit;
 }
+.top-menu__link:focus {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.jumbotron_home {
+  padding: 196px 0 107px;
+}
+
+

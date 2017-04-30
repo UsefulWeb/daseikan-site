@@ -1,0 +1,41 @@
+.jumbotron {
+  padding: 117px 0 107px;
+}
+.jumbotron__content {
+  padding: 0 30px;
+}
+.jumbotron__title {
+  font-weight: 100;
+  color: #212121;
+  font-size: 91px;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0 0 18px -6px;
+}
+.jumbotron__title-first-word {
+  font-weight: 700;
+  margin-right: 17px;
+  letter-spacing: 1px;
+}
+.jumbotron__subtitle {
+  color: #343433;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1;
+  margin: 0 0 20px -2px;
+  letter-spacing: 1.4px;
+}
+.jumbotron__text {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 1px;
+  letter-spacing: 0.4px;
+  line-height: 2.2;
+}
+.jumbotron__controls {
+  margin: 71px 0 0 0;
+}
+.jumbotron__control_first {
+  margin-right: 12px;
+}

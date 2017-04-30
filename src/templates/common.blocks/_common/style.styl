@@ -4,15 +4,41 @@ body
   background-color #f6f6f6
   font-weight 400
 
-input::placeholder
-  font-family 'Lato'
-input::-webkit-input-placeholder
-  font-family 'Lato'
-input::-moz-placeholder
-  font-family 'Lato' 
-input:-ms-input-placeholder
-  font-family 'Lato'
-
+.btn
+  display inline-block
+  padding 10px 40px
+  letter-spacing 0.3px
+  font-weight bold
+  font-size 14px
+  &:hover
+    text-decoration none
+  &:focus
+    text-decoration none
+    outline none
+.btn-secondary 
+  background-color #212121
+  color #fff
+  border 2px solid #fff
+  &:hover
+    background-color #343433
+    color #fff
+  &:focus
+    background-color #343433
+    color #fff
+    
+.btn-primary 
+  background-color #fff
+  color #343433
+  border 2px solid #fff
+  &:hover
+    background-color #f1f1f1
+    border-color #f1f1f1
+    color #343433
+  &:focus
+    background-color #f1f1f1
+    border-color #f1f1f1
+    color #343433
+    
 .icon
   &-phone_small
     transform scale(0.68)
